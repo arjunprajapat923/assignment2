@@ -16,8 +16,7 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0,
   ssl: {
-    ca: Buffer.from(process.env.AIVEN_CA_CERT, 'base64'),
-    rejectUnauthorized: true
+     rejectUnauthorized: false
   },
   connectTimeout: 30000 
 });
